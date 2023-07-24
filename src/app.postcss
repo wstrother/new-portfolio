@@ -1,5 +1,42 @@
-/*place global styles here */
-html,
+
 body {
-	@apply h-full;
+	@media screen and (max-width: 800px) {
+		background-image: url('$lib/images/website-bg-mobile.jpg')
+	}
+	background-image: url('$lib/images/website-bg.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src: url('/fonts/Quicksand-VariableFont_wght.ttf');
+}
+
+/* that landing page quote */
+.splash-container { 
+	@apply container mx-auto;
+	position:fixed;
+	width: max-content;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.splash-quote {
+	@apply flex flex-col items-end;
+	@apply bg-clip-text text-transparent box-decoration-clone;
+	@apply bg-gradient-to-br;
+	@apply from-secondary-400 to-secondary-700;
+	
+	&>h1 {
+		@apply h1 font-medium tracking-tight;
+		font-variant: small-caps;
+	}
+
+	&>div {
+		@apply px-5 font-medium h4 text-secondary-500;
+		width: max-content;
+	}
 }
