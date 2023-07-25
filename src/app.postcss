@@ -14,6 +14,21 @@ body {
 	src: url('/fonts/Quicksand-VariableFont_wght.ttf');
 }
 
+.page-main {
+	width:55%;
+	@apply mx-auto bg-primary-800 px-4 pb-5 rounded;
+	min-height: 50vh;
+
+	p {
+		@apply m-4 leading-snug text-justify;
+	}
+}
+
+
+
+
+/* route: '/' */
+
 .landing-container {
 	position: fixed;
 	top: 10%;
@@ -37,13 +52,11 @@ body {
 	}
 }
 
+
+/* route: '/about' */
 .splash-container { 
-	@apply container mx-auto;
-	position:fixed;
+	@apply container mx-auto mb-2;
 	width: max-content;
-	top: 30%;
-	left: 50%;
-	transform: translate(-50%, 0);
 }
 
 .splash-quote {
