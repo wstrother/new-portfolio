@@ -14,7 +14,23 @@ body {
 	src: url('/fonts/Quicksand-VariableFont_wght.ttf');
 }
 
-/* that landing page quote */
+.face-container {
+	@apply border-2 border-primary-900 border-solid;
+
+	position: fixed;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, 0);
+
+	img {
+		opacity: 70%;
+		height: 108%;
+		width: 108%;
+		object-fit: cover;
+		transform: translate(0, -20px);
+	}
+}
+
 .splash-container { 
 	@apply container mx-auto;
 	position:fixed;
