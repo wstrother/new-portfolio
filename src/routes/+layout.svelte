@@ -15,7 +15,7 @@
 <AppBar 
 	border='border-b border-solid border-primary-800'
 	shadow='shadow'
-	background='bg-primary-700 opacity-80'
+	background='variant-glass-primary'
 	padding='py-2 pl-8 pr-8'
 	slotLead="w-4 mx-0"
 >
