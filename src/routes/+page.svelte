@@ -2,10 +2,16 @@
 	import face from '$lib/images/face.png';
 </script>
 
-<a href='/about' >About me</a>
+<div class='landing-container'>
+	<div class='face-container'>
+		<img src={face} alt="Wyatt's Face">
+	</div>
+	
+	<div class='nav-container flex flex-row justify-around w-full h3'>
 
-<a href='/portfolio' >Portfolio</a>
+		<a href='/portfolio'>View My Portfolio</a>
+		
+		<a href='/about' >Learn About Me</a>
 
-<div class='face-container bg-tertiary-900 w-[600px] h-[600px] flex justify-center rounded-full overflow-clip'>
-	<img src={face} alt="Wyatt's Face">
+	</div>
 </div>

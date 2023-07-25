@@ -14,13 +14,19 @@ body {
 	src: url('/fonts/Quicksand-VariableFont_wght.ttf');
 }
 
-.face-container {
-	@apply border-2 border-primary-900 border-solid;
-
+.landing-container {
 	position: fixed;
 	top: 10%;
 	left: 50%;
 	transform: translate(-50%, 0);
+	width: 50%;
+
+	@apply flex flex-col justify-center items-center;
+}
+
+.face-container {
+	@apply border-2 border-primary-900 border-solid;
+	@apply bg-tertiary-900 w-[600px] h-[600px] flex justify-center rounded-full overflow-clip;
 
 	img {
 		opacity: 70%;
