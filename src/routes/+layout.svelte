@@ -6,6 +6,7 @@
 	import github from '$lib/images/github.png';
 	import back from '$lib/images/back.png';
 	import { page } from '$app/stores';
+	import { slide } from 'svelte/transition';
 
 	let backButton = false;
 	$: backButton = $page.url.pathname !== '/';
@@ -17,12 +18,13 @@
 	shadow='shadow'
 	background='variant-glass-primary'
 	padding='py-2 pl-8 pr-8'
-	slotLead="w-4 mx-0"
+	slotLead="w-4 h-4 mx-0 aspect-square hover:scale-[115%]"
+	slotTrail="hover:scale-[115%]"
 >
 
 	<svelte:fragment slot="lead">
 		{#if backButton}
-			<a href='/'><img src={back} alt='go back'></a>
+			<a href='/' out:slide><img src={back} alt='go back'></a>
 		{:else}
 			&nbsp;
 		{/if}

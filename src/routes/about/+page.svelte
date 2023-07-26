@@ -4,6 +4,8 @@
 	import AboutSite from '$lib/copy/about-site.svelte';
 	import Contact from '$lib/copy/contact.svelte';
 
+	import { fade } from 'svelte/transition';
+
 	let tabSet = 0;
 </script>
 
@@ -32,13 +34,17 @@
 		</Tab>
 			
 		<svelte:fragment slot="panel">
-			{#if tabSet === 0}
-				<AboutMe />
-			{:else if tabSet === 1}
-				<AboutSite />
-			{:else if tabSet === 2}
-				<Contact />
-			{/if}
+			{#key tabSet}
+				<div in:fade>
+					{#if tabSet === 0}
+						<AboutMe />
+					{:else if tabSet === 1}
+						<AboutSite />
+					{:else if tabSet === 2}
+						<Contact />
+					{/if}
+				</div>
+			{/key}
 		</svelte:fragment>
 	</TabGroup>
 </div>
