@@ -3,8 +3,9 @@
 	import { fade } from "svelte/transition";
     import TwitchBot from "$lib/copy/projects/twitch-bot.svelte";
     import OtherProjects from '$lib/copy/projects/other-projects.svelte';
+	import VisualArt from '../../lib/components/visual-art.svelte';
 
-    let tabSet = 0;
+    let tabSet = 2;
 
 </script>
 
@@ -38,7 +39,7 @@
 					{:else if tabSet === 1}
                         <OtherProjects />
 					{:else if tabSet === 2}
-                        other stuff
+                        <VisualArt />
 					{/if}
 				</div>
 			{/key}
