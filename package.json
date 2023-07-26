@@ -7,7 +7,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"deploy": "vite build && npx gh-pages -d build -t true"
 	},
 	"devDependencies": {
 		"@floating-ui/dom": "^1.4.5",
