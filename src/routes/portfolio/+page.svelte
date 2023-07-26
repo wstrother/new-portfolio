@@ -2,6 +2,7 @@
 	import { TabGroup, Tab } from '@skeletonlabs/skeleton';
 	import { fade } from "svelte/transition";
     import TwitchBot from "$lib/copy/projects/twitch-bot.svelte";
+    import OtherProjects from '$lib/copy/projects/other-projects.svelte';
 
     let tabSet = 0;
 
@@ -22,11 +23,11 @@
 		</Tab>
 	
 		<Tab bind:group={tabSet} name="tab2" value={1}>
-			Pokemon Battleships
+			Odds and Ends
 		</Tab>
 		
 		<Tab bind:group={tabSet} name="tab3" value={2}>
-			Odds and Ends
+			Visual Art
 		</Tab>
 			
 		<svelte:fragment slot="panel">
@@ -35,7 +36,7 @@
 					{#if tabSet === 0}
 						<TwitchBot />
 					{:else if tabSet === 1}
-                        battleships
+                        <OtherProjects />
 					{:else if tabSet === 2}
                         other stuff
 					{/if}
