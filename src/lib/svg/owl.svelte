@@ -1,5 +1,6 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 483.463 473.439" enable-background="new 0 0 483.463 473.439"
+	 id="Owl-Art"
 	 xml:space="preserve">
 <g id="background">
 	<path fill="#FF0000" d="M481.418,426.185c-0.972-1.479-2.183-2.848-3.313-4.157c-2.809-3.25-5.565-6.689-9.584-8.681

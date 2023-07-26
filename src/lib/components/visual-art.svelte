@@ -29,30 +29,30 @@
 <div class="p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center">
 	<!-- Button: Left -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselLeft}>
-		back
+		&lt;
 	</button>
 	<!-- Full Images -->
 	<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
 	
-        <div class="snap-center min-w-[100%] h-[500px] flex justify-center items-center">
+        <div class="scroll-card">
             <Zebra />
         </div>
-        <div class="snap-center min-w-[100%] h-[500px] flex justify-center items-center">
+        <div class="scroll-card">
             <Owl />
         </div>
-        <div class="snap-center min-w-[100%] h-[500px] flex justify-center items-center">
+        <div class="scroll-card">
             <Quail />
         </div>
-        <div class="snap-center min-w-[100%] h-[500px] flex justify-center items-center">
+        <div class="scroll-card">
             <Monster />
         </div>
-        <div class="snap-center min-w-[100%] h-[500px] flex justify-center items-center">
+        <div class="scroll-card">
             <Turtle />
         </div>
         
 	</div>
 	<!-- Button: Right -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselRight}>
-		right
+		&gt;
 	</button>
 </div>

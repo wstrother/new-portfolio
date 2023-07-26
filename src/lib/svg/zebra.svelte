@@ -1,4 +1,4 @@
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Zebra-Art" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 2575.678 1931.759" enable-background="new 0 0 2575.678 1931.759"
 	 xml:space="preserve">
 <g id="background">

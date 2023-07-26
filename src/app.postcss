@@ -58,6 +58,7 @@ body {
 }
 
 
+
 /* route: '/about' */
 .splash-container { 
 	@apply container mx-auto mb-2;
@@ -81,9 +82,33 @@ body {
 	}
 }
 
+
+
+/* route: '/portfolio' */
+
+/* image carousel */
 svg {
 	height: 100%;
 }
 g#background>path {
-	fill: blue;
+	fill: #3b5170;
+}
+#Zebra-Art {
+	transform: scale(1.15) translate(0, 15px)
+}
+#Owl-Art {
+	transform: scale(0.95) translate(0, -15px)
+}
+#Quail-Art {
+	transform: scale(1.1)
+}
+#Turtle-Art {
+	transform: scale(0.9)
+}
+#Monster-Art {
+	transform: scale(0.9)
+}
+
+.scroll-card {
+	@apply snap-center min-w-[100%] h-[500px] flex justify-center items-center overflow-hidden;
 }
