@@ -26,7 +26,7 @@
 
 </script>
 
-<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+<div class="p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center">
 	<!-- Button: Left -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselLeft}>
 		back
@@ -34,19 +34,19 @@
 	<!-- Full Images -->
 	<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
 	
-        <div class="snap-center bg-red-500 w-[500px] h-[500px]">
+        <div class="snap-center min-w-[100%] h-[500px] flex justify-center items-center">
             <Zebra />
         </div>
-        <div class="snap-center bg-red-500 w-[500px] h-[500px]">
+        <div class="snap-center min-w-[100%] h-[500px] flex justify-center items-center">
             <Owl />
         </div>
-        <div class="snap-center bg-red-500 w-[500px] h-[500px]">
+        <div class="snap-center min-w-[100%] h-[500px] flex justify-center items-center">
             <Quail />
         </div>
-        <div class="snap-center bg-red-500 w-[500px] h-[500px]">
+        <div class="snap-center min-w-[100%] h-[500px] flex justify-center items-center">
             <Monster />
         </div>
-        <div class="snap-center bg-red-500 w-[500px] h-[500px]">
+        <div class="snap-center min-w-[100%] h-[500px] flex justify-center items-center">
             <Turtle />
         </div>
         
