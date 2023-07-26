@@ -1,3 +1,16 @@
+<script>
+    import ProjectHeader from '$lib/components/project-header.svelte';
+    import twitchbot from '$lib/images/twitchbot.png';
+
+</script>
+
+<ProjectHeader
+    img={twitchbot}
+    url='https://wstrother.github.io/ahp_twitch_bot_site/'
+    repo='https://github.com/wstrother/ahp_twitch_bot'
+    name='AHP Twitch Bot'
+/>
+
 <p>Currently my favorite pet project, this code repository defines a simple Python script which will launch a helpful bot to connect to your Twitch chat.</p>
 
 <p>
