@@ -9,7 +9,7 @@
 	let tabSet = 0;
 </script>
 
-<div class="splash-container">
+<div class="splash-container" in:fade>
 	<div class="splash-quote">
 		<h1>
 			i already am eating from the trashcan all the time...

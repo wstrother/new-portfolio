@@ -24,7 +24,7 @@
 
 	<svelte:fragment slot="lead">
 		{#if backButton}
-			<a href='/' out:slide><img src={back} alt='go back'></a>
+			<a href='/' transition:slide><img src={back} alt='go back'></a>
 		{:else}
 			&nbsp;
 		{/if}
