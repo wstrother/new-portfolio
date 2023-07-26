@@ -26,13 +26,13 @@
 
 </script>
 
-<div class="p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+<div class="carousel">
 	<!-- Button: Left -->
 	<button type="button" class="btn-icon variant-filled" on:click={carouselLeft}>
 		&lt;
 	</button>
 	<!-- Full Images -->
-	<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
+	<div bind:this={elemCarousel} class="carousel-inner">
 	
         <div class="scroll-card">
             <Zebra />

@@ -16,7 +16,6 @@ body {
 
 .page-main {
 	width:55%;
-	/* @apply mx-auto bg-primary-900 px-4 pb-5 rounded; */
 	@apply mx-auto;
 	min-height: 50vh;
 
@@ -87,12 +86,43 @@ body {
 /* route: '/portfolio' */
 
 /* image carousel */
+.carousel {
+	@apply p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center;
+}
+.carousel-inner {
+	@apply snap-x snap-mandatory scroll-smooth flex overflow-x-auto rounded-sm;
+	background-image: url('$lib/images/art-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* background-attachment: fixed; */
+}
 svg {
 	height: 100%;
 }
 g#background>path {
-	fill: #3b5170;
+	/* fill: #3b5170; */
+	animation: color-shift 10s linear;
+	animation-iteration-count: infinite;
 }
+g#negative>path {
+	fill: #000;
+}
+
+@keyframes color-shift {
+	100%, 0% {
+	  fill: #97d47c; 
+	}
+
+	33% {
+	  fill: #415a7c; 
+	}
+
+	66% {
+	  fill: #a9c388;
+	}
+
+}
+
 #Zebra-Art {
 	transform: scale(1.15) translate(0, 15px)
 }

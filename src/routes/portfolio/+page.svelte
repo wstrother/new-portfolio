@@ -5,7 +5,7 @@
     import OtherProjects from '$lib/copy/projects/other-projects.svelte';
 	import VisualArt from '../../lib/components/visual-art.svelte';
 
-    let tabSet = 2;
+    let tabSet = 0;
 
 </script>
 
