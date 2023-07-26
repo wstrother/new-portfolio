@@ -20,7 +20,11 @@
 </div>
 
 <div class='page-main'>
-	<TabGroup>
+	<TabGroup
+		regionList='variant-glass-primary rounded'
+		regionPanel='bg-primary-900 rounded p-1 min-h-[50vh] m-0'
+		spacing='space'
+	>
 		<Tab bind:group={tabSet} name="tab1" value={0}>
 			About Wyatt
 		</Tab>
