@@ -1,3 +1,4 @@
+@config '../tailwind.config.cjs';
 
 body {
 	@media screen and (max-width: 800px) {
@@ -57,11 +58,12 @@ body {
 }
 
 .nav-container {
-	@apply flex flex-row justify-around w-full h3;
+	@apply flex flex-row justify-around w-full;
 	z-index: 1;
+	font-size: 18pt;
 
 	@media screen and (max-width: 1000px) {
-		@apply justify-between;
+		justify-items: between;
 	}
 }
 
@@ -70,10 +72,12 @@ body {
 	@apply bg-tertiary-900 w-[600px] h-[600px] flex justify-center rounded-full overflow-clip;
 
 	@media screen and (max-height: 800px) {
-		@apply w-[300px] h-[300px];
+		width: 300px;
+		height: 300px;
 	}
 	@media screen and (max-width: 800px) {
-		@apply w-[300px] h-[300px];
+		width: 300px;
+		height: 300px;
 	}
 
 	img {
@@ -110,7 +114,7 @@ body {
 		@apply text-7xl font-medium tracking-tight select-none;
 		font-variant: small-caps;
 		@media screen and (max-width: 1050px) {
-			@apply text-3xl;
+			font-size: 24pt;
 		}
 	}
 
@@ -118,7 +122,7 @@ body {
 		@apply flex flex-col items-end;
 		@apply px-5 font-medium text-3xl text-secondary-500 select-none;
 		@media screen and (max-width: 1050px) {
-			@apply text-3xl;
+			font-size: 14pt;
 		}
 	}
 }
