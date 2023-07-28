@@ -15,7 +15,17 @@ body {
 }
 
 .page-main {
-	width:55%;
+	@apply mt-2;
+	width:65%;
+	@media screen and (max-width: 1500px) {
+		width: 75%;
+	}
+	@media screen and (max-width: 1000px) {
+		width: 85%;
+	}
+	@media screen and (max-width: 800px) {
+		width: 95%;
+	}
 	@apply mx-auto;
 	min-height: 50vh;
 
@@ -39,13 +49,32 @@ body {
 	left: 50%;
 	transform: translate(-50%, 0);
 	width: 50%;
+	@media screen and (max-width: 800px) {
+		width: 95%;
+	}
 
 	@apply flex flex-col justify-center items-center;
+}
+
+.nav-container {
+	@apply flex flex-row justify-around w-full h3;
+	z-index: 1;
+
+	@media screen and (max-width: 1000px) {
+		@apply justify-between;
+	}
 }
 
 .face-container {
 	@apply border-2 border-primary-900 border-solid;
 	@apply bg-tertiary-900 w-[600px] h-[600px] flex justify-center rounded-full overflow-clip;
+
+	@media screen and (max-height: 800px) {
+		@apply w-[300px] h-[300px];
+	}
+	@media screen and (max-width: 800px) {
+		@apply w-[300px] h-[300px];
+	}
 
 	img {
 		opacity: 70%;
@@ -62,10 +91,17 @@ body {
 .splash-container { 
 	@apply container mx-auto mb-2;
 	width: max-content;
+	@media screen and (max-width: 1050px) {
+		width: 90%;
+	}
+
+	@media screen and (max-width: 800px) {
+		display: none;
+	}
 }
 
 .splash-quote {
-	@apply flex flex-col items-end;
+	
 	@apply bg-clip-text text-transparent box-decoration-clone;
 	@apply bg-gradient-to-br;
 	@apply from-secondary-400 to-secondary-700;
@@ -73,11 +109,17 @@ body {
 	&>h1 {
 		@apply text-7xl font-medium tracking-tight select-none;
 		font-variant: small-caps;
+		@media screen and (max-width: 1050px) {
+			@apply text-3xl;
+		}
 	}
 
 	&>div {
+		@apply flex flex-col items-end;
 		@apply px-5 font-medium text-3xl text-secondary-500 select-none;
-		width: max-content;
+		@media screen and (max-width: 1050px) {
+			@apply text-3xl;
+		}
 	}
 }
 
@@ -88,6 +130,7 @@ body {
 /* image carousel */
 .carousel {
 	@apply p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center;
+	/* max-height: 99vh; */
 }
 .carousel-inner {
 	@apply snap-x snap-mandatory scroll-smooth flex overflow-x-auto rounded-sm;

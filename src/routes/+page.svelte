@@ -7,7 +7,7 @@
 		<img src={face} alt="Wyatt's Face">
 	</div>
 	
-	<div class='nav-container flex flex-row justify-around w-full h3'>
+	<div class='nav-container'>
 
 		<a href='/portfolio'>View My Portfolio</a>
 		
