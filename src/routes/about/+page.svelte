@@ -1,8 +1,9 @@
 <script>
 	import { TabGroup, Tab } from '@skeletonlabs/skeleton';
-	import AboutMe from '$lib/copy/about-me.svelte';
-	import AboutSite from '$lib/copy/about-site.svelte';
-	import Contact from '$lib/copy/contact.svelte';
+	import SvelteMarkdown from 'svelte-markdown';
+	import AboutMe from '$lib/md/about-me.md?raw';
+	import AboutSite from '$lib/md/about-site.md?raw';
+	import Contact from '$lib/md/contact-info.md?raw';
 
 	import { fade } from 'svelte/transition';
 
@@ -41,11 +42,11 @@
 			{#key tabSet}
 				<div in:fade>
 					{#if tabSet === 0}
-						<AboutMe />
+						<SvelteMarkdown source={AboutMe} />
 					{:else if tabSet === 1}
-						<AboutSite />
+						<SvelteMarkdown source={AboutSite} />
 					{:else if tabSet === 2}
-						<Contact />
+						<SvelteMarkdown source={Contact} />
 					{/if}
 				</div>
 			{/key}
