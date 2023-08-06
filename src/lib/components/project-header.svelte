@@ -1,8 +1,8 @@
 <script>
-    export let img;
-    export let url;
-    export let name;
-    export let repo;
+    export let img = null;
+    export let url = '';
+    export let name = '';
+    export let repo = '';
 </script>
 
 

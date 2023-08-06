@@ -1,27 +1,38 @@
 <script>
     import SvelteMarkdown from 'svelte-markdown';
+    import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 
     export let readme
 </script>
 
-<div id="readme">
-    <a href="#readme" class="readme-header h4">
-        README.md
-    </a>
-</div>
+<Accordion>
 
-<div class="readme-container">
-    <SvelteMarkdown source={readme} />
-</div>
-<div>
-    <a href="#page-main" class="back-to-top">
-        Back to top
-    </a>
-</div>
+    <AccordionItem regionControl="bg-primary-500" hover="bg-primary-500">
 
+        <svelte:fragment slot="summary">
+            <div class="readme-header h4">
+                    README.md
+            </div>
+        </svelte:fragment>
+        
+        <svelte:fragment slot="content">
+
+            <div class="readme-container">
+                <SvelteMarkdown source={readme} />
+            </div>
+            <div>
+                <a href="#page-main" class="back-to-top">
+                    Back to top
+                </a>
+            </div>
+        </svelte:fragment>
+    </AccordionItem>
+
+</Accordion>
+    
 <style lang='postcss'>
 
-#readme, .back-to-top {
+.back-to-top {
     @apply bg-primary-600 p-2 mb-2 mx-4 rounded
 }
 
