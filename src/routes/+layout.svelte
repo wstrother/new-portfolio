@@ -2,6 +2,7 @@
 	import '../theme.postcss';
 	import '@skeletonlabs/skeleton/styles/skeleton.css';
 	import '../app.postcss';
+	import '../readme.postcss';
 	import { AppBar } from '@skeletonlabs/skeleton';
 	import github from '$lib/images/github.png';
 	import back from '$lib/images/back.png';
