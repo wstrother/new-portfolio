@@ -14,7 +14,7 @@
     name='AHP Twitch Bot'
 >
     
-    <p>Currently my favorite pet project, this code repository defines a simple Python script which will launch a helpful bot to connect to your Twitch chat.</p>
+    <p>This code repository defines a simple Python script which will launch a helpful bot to connect to your Twitch chat.</p>
     
     <p>
         The real fun comes from the way this project defines and implements a specific JSON spec for creating a set of commands. These commands can be as simple
