@@ -5,6 +5,7 @@
     import OtherProjects from '$lib/copy/projects/other-projects.svelte';
 	import VisualArt from '../../lib/components/visual-art.svelte';
 
+	export let data;
     let tabSet = 0;
 
 </script>
@@ -13,21 +14,25 @@
     <div class="splash-quote mb-5"><h1>project portfolio</h1></div>
 </div>
 
-<div class="page-main">
+<div class="page-main" id="page-main">
     <TabGroup
 		regionList='variant-glass-tertiary rounded'
 		regionPanel='bg-tertiary-900 rounded p-1 min-h-[50vh] m-0'
 		spacing='space'
 	>
-		<Tab bind:group={tabSet} name="tab1" value={0}>
-			TwitchBot
+		<Tab bind:group={tabSet} name="tab0" value={0}>
+			Streaming App
+		</Tab>
+
+		<Tab bind:group={tabSet} name="tab1" value={1}>
+			Twitch Bot
 		</Tab>
 	
-		<Tab bind:group={tabSet} name="tab2" value={1}>
+		<Tab bind:group={tabSet} name="tab2" value={2}>
 			Odds and Ends
 		</Tab>
 		
-		<Tab bind:group={tabSet} name="tab3" value={2}>
+		<Tab bind:group={tabSet} name="tab3" value={3}>
 			Visual Art
 		</Tab>
 			
@@ -35,7 +40,9 @@
 			{#key tabSet}
 				<div in:fade>
 					{#if tabSet === 0}
-						<TwitchBot />
+						thing
+					{:else if tabSet === 1}
+						<TwitchBot readme={data.readme.twitchbot}/>
 					{:else if tabSet === 1}
                         <OtherProjects />
 					{:else if tabSet === 2}

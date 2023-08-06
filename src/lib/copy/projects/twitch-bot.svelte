@@ -1,6 +1,9 @@
 <script>
     import ProjectHeader from '$lib/components/project-header.svelte';
+    import ReadmeFile from '../../components/readme-file.svelte';
     import twitchbot from '$lib/images/twitchbot.png';
+
+    export let readme;
 
 </script>
 
@@ -28,3 +31,5 @@
     and the next big step in this project is going to be expanding on this idea with an actual web platform and graphical UI, so be on the look out
     for more big updates related to this project.
 </p>
+
+<ReadmeFile {readme} />
