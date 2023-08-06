@@ -5,7 +5,7 @@
 </script>
 
 <div id="readme">
-    <a href="#readme" class="readme-header">
+    <a href="#readme" class="readme-header h4">
         README.md
     </a>
 </div>
@@ -26,7 +26,7 @@
 }
 
 .readme-header {
-    @apply font-mono h4
+    @apply font-mono 
 }
 
 .readme-container {

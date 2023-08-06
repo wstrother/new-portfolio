@@ -1,9 +1,10 @@
 <script>
 	import { TabGroup, Tab } from '@skeletonlabs/skeleton';
 	import { fade } from "svelte/transition";
-    import TwitchBot from "$lib/copy/projects/twitch-bot.svelte";
-    import OtherProjects from '$lib/copy/projects/other-projects.svelte';
+    import TwitchBot from "$lib/components/projects/twitch-bot.svelte";
+    import OtherProjects from '$lib/components/projects/other-projects.svelte';
 	import VisualArt from '../../lib/components/visual-art.svelte';
+	import StreamingApp from '../../lib/components/projects/streaming-app.svelte';
 
 	export let data;
     let tabSet = 0;
@@ -40,13 +41,13 @@
 			{#key tabSet}
 				<div in:fade>
 					{#if tabSet === 0}
-						thing
+						<StreamingApp readme={data.readme.streamingapp} />
 					{:else if tabSet === 1}
 						<TwitchBot readme={data.readme.twitchbot}/>
-					{:else if tabSet === 1}
-                        <OtherProjects />
 					{:else if tabSet === 2}
-                        <VisualArt />
+						<OtherProjects />
+					{:else if tabSet === 3}
+						<VisualArt />
 					{/if}
 				</div>
 			{/key}

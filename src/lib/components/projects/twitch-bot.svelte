@@ -1,6 +1,6 @@
 <script>
     import ProjectHeader from '$lib/components/project-header.svelte';
-    import ReadmeFile from '../../components/readme-file.svelte';
+    import ReadmeFile from '../readme-file.svelte';
     import twitchbot from '$lib/images/twitchbot.png';
 
     export let readme;
