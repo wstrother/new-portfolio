@@ -1,10 +1,10 @@
 <script>
     import ProjectHeader from '$lib/components/project-header.svelte';
-    import ReadmeFile from '../readme-file.svelte';
     import preview from '$lib/images/streamingapp.png';
 
-    export let readme;
+    const readmeURL = 'https://raw.githubusercontent.com/wstrother/streaming-app/master/README.md'
 
+    
 </script>
 
 
@@ -12,6 +12,7 @@
     img={preview}
     repo='https://https://github.com/wstrother/streaming-app'
     name='AHP Streaming App'
+    readme='https://raw.githubusercontent.com/wstrother/streaming-app/master/README.md'
 >
     
     <p>This streaming application is a full stack web app that will provide some really cool functionality for streaming with dynamic layouts with real time state management.</p>
@@ -21,5 +22,3 @@
     <p>This project is built in SvelteKit/Typescript with a Postgres/Supabase backend, and also utilizes the Tailwind based Skeleton library for UI and customization.</p>
 
 </ProjectHeader>
-
-<ReadmeFile {readme} />

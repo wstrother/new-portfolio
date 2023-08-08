@@ -1,30 +1,50 @@
 <script>
     import SvelteMarkdown from 'svelte-markdown';
     import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
+    import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
-    export let readme
+    export let url
+
+    let readmePromise, loaded = false
+    const getReadme = async () => {
+        const res = await fetch(url).then(res=>res.text())
+        loaded = true
+        return res
+    }
+    onMount(() => {
+        readmePromise = getReadme()
+    })
 </script>
 
 <Accordion>
 
-    <AccordionItem regionControl="bg-primary-500" hover="bg-primary-500">
+    <AccordionItem regionControl="bg-primary-500" hover="bg-primary-500" disabled={!loaded}>
 
         <svelte:fragment slot="summary">
             <div class="readme-header h4">
-                    README.md
+                README.md
+                {#await readmePromise}
+                    <span out:fade={{delay: 1000, duration: 500}}>loading from Github...</span>
+                {:then readme} 
+                    &nbsp;
+                {/await}
             </div>
         </svelte:fragment>
         
         <svelte:fragment slot="content">
-
-            <div class="readme-container">
-                <SvelteMarkdown source={readme} />
-            </div>
-            <div>
-                <a href="#page-main" class="back-to-top">
-                    Back to top
-                </a>
-            </div>
+            {#await readmePromise}
+                &nbsp;
+            {:then readme}     
+                <div class="readme-container">
+                    <SvelteMarkdown source={readme} />
+                </div>
+                <div>
+                    <a href="#page-main" class="back-to-top">
+                        Back to top
+                    </a>
+                </div>
+            {/await}
         </svelte:fragment>
     </AccordionItem>
 

@@ -1,9 +1,6 @@
 <script>
     import ProjectHeader from '$lib/components/project-header.svelte';
-    import ReadmeFile from '../readme-file.svelte';
     import twitchbot from '$lib/images/twitchbot.png';
-
-    export let readme;
 
 </script>
 
@@ -12,6 +9,7 @@
     url='https://wstrother.github.io/ahp_twitch_bot_site/'
     repo='https://github.com/wstrother/ahp_twitch_bot'
     name='AHP Twitch Bot'
+    readme='https://raw.githubusercontent.com/wstrother/ahp_twitch_bot/master/readme.md'
 >
     
     <p>This code repository defines a simple Python script which will launch a helpful bot to connect to your Twitch chat.</p>
@@ -33,5 +31,3 @@
     </p>
 
 </ProjectHeader>
-
-<ReadmeFile {readme} />

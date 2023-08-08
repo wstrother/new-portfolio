@@ -1,8 +1,10 @@
 <script>
+    import ReadmeFile from "./readme-file.svelte";
     export let img = null;
     export let url = '';
     export let name = '';
     export let repo = '';
+    export let readme = '';
 </script>
 
 
@@ -30,4 +32,6 @@
     {/if}
     
     <slot></slot>
+
+    <ReadmeFile url={readme} />
 </div>

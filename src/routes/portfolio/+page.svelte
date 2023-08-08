@@ -6,7 +6,6 @@
 	import VisualArt from '../../lib/components/visual-art.svelte';
 	import StreamingApp from '../../lib/components/projects/streaming-app.svelte';
 
-	export let data;
     let tabSet = 0;
 
 </script>
@@ -41,9 +40,9 @@
 			{#key tabSet}
 				<div in:fade>
 					{#if tabSet === 0}
-						<StreamingApp readme={data.readme.streamingapp} />
+						<StreamingApp />
 					{:else if tabSet === 1}
-						<TwitchBot readme={data.readme.twitchbot}/>
+						<TwitchBot />
 					{:else if tabSet === 2}
 						<OtherProjects />
 					{:else if tabSet === 3}
