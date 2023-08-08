@@ -33,5 +33,7 @@
     
     <slot></slot>
 
-    <ReadmeFile url={readme} />
+    {#if readme}
+        <ReadmeFile url={readme} />
+    {/if}
 </div>
