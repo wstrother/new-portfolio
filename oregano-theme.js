@@ -1,4 +1,4 @@
-export const myCustomTheme = {
+export const oregano = {
     name: 'oregano',
     properties: {
         "--theme-font-family-base":

@@ -1,8 +1,8 @@
 import { join } from 'path'
 // import forms from '@tailwindcss/forms'
-// import typography from '@tailwindcss/typography'
+import typography from '@tailwindcss/typography'
 import { skeleton } from '@skeletonlabs/tw-plugin'
-import { myCustomTheme } from './oregano-theme'
+import { oregano } from './oregano-theme'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -14,10 +14,12 @@ module.exports = {
 	theme: {
 		extend: {},
 	},
-	plugins: [skeleton({
+	plugins: [
+		typography,
+		require('@tailwindcss/container-queries'),
+		skeleton({
 		themes: {
-			preset: ['skeleton','crimson'],
-			custom: [myCustomTheme]
+			custom: [oregano]
 		}
 	})],
 }
