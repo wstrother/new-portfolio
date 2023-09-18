@@ -27,7 +27,7 @@
 
 <div class="page-main" id="page-main">
     <TabGroup
-		regionList='variant-glass-tertiary rounded'
+		regionList='variant-glass-tertiary rounded items-center gap-4'
 		regionPanel='bg-tertiary-900 rounded p-1 min-h-[50vh] m-0'
 		spacing='space'
 	>
@@ -37,10 +37,16 @@
 				selected={tabSet === slug}
 				on:click={() => tabSet=slug}
 			>
-				{name}
+				<span class:selected={tabSet === slug}>{name}</span>
 			</TabAnchor>
 		{/each}
 	</TabGroup>
 
 	<slot />
 </div>
+
+<style lang="postcss">
+	.selected {
+		@apply h3 ml-4
+	}
+</style>
