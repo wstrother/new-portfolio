@@ -1,6 +1,6 @@
 <script>
     import SvelteMarkdown from 'svelte-markdown'
-    import { Accordion, AccordionItem } from '@skeletonlabs/skeleton'
+    // import { Accordion, AccordionItem } from '@skeletonlabs/skeleton'
     import { onMount } from 'svelte'
 	import { fade } from 'svelte/transition'
 
@@ -29,55 +29,34 @@
     })
 </script>
 
-<Accordion>
-
-    <AccordionItem regionControl="bg-primary-500" hover="bg-primary-500" disabled={!loaded}>
-
-        <svelte:fragment slot="summary">
-            <div class="readme-header h4">
-                README.md
-                {#if fetching}
-                    {#await readmePromise}
-                        <span out:fade={{delay: 1000, duration: 500}}>loading from Github...</span>
-                    {:then _}
-                        &nbsp;
-                    {/await}
-                {/if}
-            </div>
-        </svelte:fragment>
-        
-        <svelte:fragment slot="content">
+<div class="modal-container">
+    
+    {#if fetching}
+        <div class="font-mono h4 w-1/2 mx-auto">
             {#await readmePromise}
+                <span out:fade={{delay: 1000, duration: 500}}>loading README.md from Github...</span>
+            {:then _}
                 &nbsp;
-            {:then readme}     
-                <div class="readme-container">
-                    <SvelteMarkdown source={readme} />
-                </div>
-                <div class="flex justify-end">
-                    <a href="#page-main" class="back-to-top">
-                        Back to top
-                    </a>
-                </div>
             {/await}
-        </svelte:fragment>
-    </AccordionItem>
+        </div>
+    {/if}
+    
+    {#await readmePromise}
+        &nbsp;
+    {:then readme}
+        <div class="readme-container">
+            <SvelteMarkdown source={readme} />
+        </div>
+    {/await}
+</div>
 
-</Accordion>
     
 <style lang='postcss'>
 
-.back-to-top {
-    @apply bg-primary-600 p-2 mb-2 mx-4 rounded
-}
-
-.readme-header {
-    @apply font-mono 
-}
-
 .readme-container {
-    @apply bg-tertiary-400 rounded
-    text-lg text-black
-    overflow-y-scroll h-[80vh] w-[80%]
-    mb-8 p-4 mx-auto
+    @apply  bg-tertiary-400 rounded p-4
+            text-lg text-black
+            overflow-y-scroll 
+            h-[80%]
 }
 </style>

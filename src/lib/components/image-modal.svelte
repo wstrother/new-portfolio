@@ -2,4 +2,6 @@
     export let src, alt
 </script>
 
-<img {src} {alt} />
+<div class="modal-container">
+    <img {src} {alt} class="object-contain"/>
+</div>

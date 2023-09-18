@@ -45,7 +45,7 @@
             </div>
 
             {#if project.imgs.length > 1}
-                <div class="grid grid-cols-3 gap-4 items-center p-2">
+                <div class="img-preview-panel">
                     {#each project.imgs as src}
                         <div class="img-preview img-container">
                             <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -80,7 +80,17 @@
             {/if}
         </span>
 
-        <button class="btn btn-sm bg-white text-secondary-900 font-extrabold">Open Readme</button>
+        <button class="btn btn-sm bg-white text-secondary-900 font-extrabold"
+            on:click={() => modalStore.trigger({
+                type: 'component',
+                component: {
+                    ref: ReadmeFile,
+                    props: {url: project.readmeURL}
+                }
+            })}
+        >
+            Open Readme
+        </button>
     </div>
 
     <div bind:this={innerMD} style:display="none">
@@ -90,24 +100,23 @@
         <SvelteMarkdown source={innerMD?.innerText} />
     </div>
 
-
-    <!-- {#if project.readmeURL}
-        <ReadmeFile url={project.readmeURL} />
-    {/if} -->
 </div>
 
 <style lang="postcss">
-    .img-container>img {@apply object-cover h-[100%]}
+    .img-container>img {@apply object-cover h-[100%] w-[100%]}
     .img-section {
-        @apply float-left w-[40%]
+        @apply float-left w-[40%] p-2 mr-6
     }
     .img-container {
         @apply  rounded border border-black
-                m-4 overflow-hidden
+                overflow-hidden
                 max-h-[250px] h-fit
     }
     .img-preview {
         @apply  h-[75px] rounded border border-black opacity-50
+    }
+    .img-preview-panel {
+        @apply grid grid-cols-3 items-center gap-2 mt-1
     }
     .icons{@apply flex justify-between items-center gap-4 m-4 md:mr-10}
 </style>

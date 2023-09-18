@@ -19,7 +19,7 @@
 		if (tabSet === 'portfolio') tabSet = tabs[0][1]
 	})
 	// try to fix the tab bug
-	// $: tabSet = $page.url.pathname.replace(/.*\/([^/]+)$/, "$1")
+	$: tabSet = $page.url.pathname.replace(/.*\/([^/]+)$/, "$1")
 
 </script>
 
