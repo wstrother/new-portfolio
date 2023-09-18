@@ -25,7 +25,7 @@
 </div>
 
 <div class="page-main" id="page-main">
-	<TabWrapper>
+	<TabWrapper listBG="variant-glass-tertiary" panelBG="bg-tertiary-900">
 		{#each tabs as [name, slug]}
 			<TabAnchor
 				href={`/portfolio/${slug}`}
@@ -35,7 +35,9 @@
 				<span class="transition-all">{name}</span>
 			</TabAnchor>
 		{/each}
+		
+		<svelte:fragment slot="panel">
+			<slot />
+		</svelte:fragment>
 	</TabWrapper>
-
-	<slot />
 </div>

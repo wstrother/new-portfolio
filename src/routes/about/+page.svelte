@@ -18,7 +18,7 @@
 </div>
 
 <div class='page-main'>
-	<TabWrapper>
+	<TabWrapper listBG="variant-glass-primary" panelBG="bg-primary-900">
 		<Tab bind:group={tabSet} name="tab1" value={0}>
 			About Wyatt
 		</Tab>
