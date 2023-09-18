@@ -37,7 +37,7 @@
 	</svelte:fragment>
 	<span class="ml-5 mr-3 lg:h3 md:h5 font-thin tracking-wider">Wyatt Strother</span>
 
-	<span class="tracking-wide text-xs md:h5">Web Design / Full Stack Web Dev</span>
+	<span class="tracking-wide text-xs md:h5 hidden sm:inline">Web Design / Full Stack Web Dev</span>
 
 
 	<svelte:fragment slot="trail">
@@ -49,4 +49,4 @@
 
 <slot />
 
-<Modal />
+<Modal regionBackdrop="bg-primary-900"/>
