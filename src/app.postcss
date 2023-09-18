@@ -59,22 +59,25 @@ body {
 
 /* Tab Group Styles */
 .tab__regionList{
-	@apply 	rounded 
+	@apply 	rounded max-w-[1090px] mx-auto
 			items-end gap-4 h-[3.5rem] 
 			overflow-y-hidden transition-all  
 			ease-in-out duration-300
 }
 .tab__active{@apply text-tertiary-500 h3}
 .tab__hover{@apply hover:text-tertiary-500}
-.tab__regionPanel{@apply rounded p-1 min-h-[50vh] m-0}
+.tab__regionPanel{
+	@apply 	rounded p-1 px-4
+			min-h-[60vh] max-w-[1000px]
+			m-0 mx-auto 
+}
 
 .page-main {
-	@apply 
-			md:w-3/4 
+	@apply 	md:w-3/4 
 			w-full px-4 mx-auto
 	;
 	p,ul {
-		@apply m-4 leading-snug text-justify;
+		@apply m-4 leading-snug text-justify mx-auto max-w-[850px];
 	}
 
 	li {
