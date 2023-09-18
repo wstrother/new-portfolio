@@ -8,9 +8,12 @@
 	import back from '$lib/images/back.png';
 	import { page } from '$app/stores';
 	import { slide } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
 	let backButton = false;
-	$: backButton = $page.url.pathname !== '/';
+	$: {
+		backButton = $page.url.pathname !== '/';
+	}
 
 	// h1 h2 h3 h4
 </script>
