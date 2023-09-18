@@ -3,7 +3,8 @@
     import img from '$lib/images/twitchbot.png'
 
     const project = {
-        title: 'Twitch Bot', img,
+        title: 'Twitch Bot', 
+        imgs: [img],
         readmeFile: `master/readme.md`,
         repoName: 'ahp_twitch_bot',
         siteURL: 'https://wstrother.github.io/ahp_twitch_bot_site/'

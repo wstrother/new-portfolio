@@ -1,11 +1,16 @@
 <script>
     import Project from '$lib/components/project.svelte'
-    import img from '$lib/images/streamingapp.png'
+
+    import img1 from '$lib/images/streaming-app-1.png'
+    import img2 from '$lib/images/streaming-app-2.png'
+    import img3 from '$lib/images/streaming-app-3.gif'
+
 
     const project = {
-        title: 'Streaming App', img,
+        title: 'Streaming App',
         repoName: 'streaming-app',
         readmeFile: `master/README.md`,
+        imgs: [img1, img2, img3]
     }
 </script>
 

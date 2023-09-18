@@ -7,7 +7,7 @@
 
     export let project = {
         title: '',
-        img: null,
+        imgs: [],
         siteURL: '',
         repoName: '', 
         readmeFile: ''
@@ -19,10 +19,12 @@
 </script>
 
 <div class="project-main overflow-hidden">    
-    {#if project.img}
-        <div class='project-image-container rounded float-left border border-black w-[40%] m-4'>
-            <img src={project.img} alt={`${project.title} screenshot`} />
-        </div>
+    {#if project.imgs}
+        {#each project.imgs as src}
+            <div class='project-image-container rounded float-left border border-black w-[40%] m-4'>
+                <img {src} alt={`${project.title} screenshot`} />
+            </div>
+        {/each}
     {/if}
     
     <div bind:this={innerMD} style:display="none">
