@@ -1,5 +1,5 @@
 <script>
-    import ProjectHeader from '$lib/components/project-header.svelte'
+    import Project from '$lib/components/project.svelte'
     import img from '$lib/images/twitchbot.png'
 
     const project = {
@@ -11,7 +11,7 @@
 </script>
 
 
-<ProjectHeader {project}>
+<Project {project}>
 This code repository defines a simple Python script which will launch 
 a helpful bot to connect to your Twitch chat.
 
@@ -24,4 +24,4 @@ and receive data from external web APIs. And they can be chained together such t
 When I stream on Twitch, I also use my bot to control a local node application that controls graphical layout components on my stream,
 and the next big step in this project is going to be expanding on this idea with an actual web platform and graphical UI, so be on the look out
 for more big updates related to this project.
-</ProjectHeader>
+</Project>

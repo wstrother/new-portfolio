@@ -27,7 +27,10 @@
 <div class="page-main" id="page-main">
     <TabGroup
 		regionList='variant-glass-tertiary rounded items-end gap-4 h-[3.5rem] overflow-y-hidden'
-		active="text-tertiary-500"
+		active="text-tertiary-500" 
+		
+		hover="hover:text-tertiary-500 hover:variant-glass-tertiary"
+
 		regionPanel='bg-tertiary-900 rounded p-1 min-h-[50vh] m-0'
 		spacing='space'
 	>
