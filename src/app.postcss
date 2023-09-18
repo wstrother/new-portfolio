@@ -3,9 +3,6 @@
 @tailwind utilities;
 @tailwind variants;
 
-html {
-	overflow-y: scroll;
-}
 
 body {
 	@media screen and (max-width: 800px) {
@@ -15,6 +12,10 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow-y: hidden;
+	@media (max-height: 500px) {
+		overflow-y: auto;
+	}
 }
 
 @font-face {
@@ -26,6 +27,9 @@ body {
 .quote-container {
 	@apply  relative mx-auto my-2 w-[100%]
 	;
+	@media (max-height: 500px) {
+		display: none
+	}
 }
 .quote {
 	@apply bg-clip-text text-transparent box-decoration-clone;
@@ -56,6 +60,17 @@ body {
 	;
 }
 
+.app-bar {
+	@media (max-height: 500px) {
+		@apply bg-none;
+	}
+}
+
+.app-bar-slot-default {
+	@media (max-height: 500px) {
+		display: none;
+	}
+}
 
 /* Tab Group Styles */
 .tab__regionList{
@@ -82,7 +97,11 @@ body {
 
 	li {
 		@apply my-4
-	} 
+	}
+
+	@media (max-height: 500px) {
+		@apply absolute top-0 left-1/2 translate-x-[-50%]
+	}
 }
 
 .modal-container {

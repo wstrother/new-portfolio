@@ -57,6 +57,7 @@
     @apply  bg-tertiary-400 rounded p-4
             text-lg text-black
             overflow-y-scroll 
-            h-[80%]
+            sm:h-[80vh]
+            h-[95vh]
 }
 </style>
