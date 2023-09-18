@@ -3,6 +3,10 @@
 	import '../readme.postcss'
 
 	import { AppBar } from '@skeletonlabs/skeleton'
+	import { Modal } from '@skeletonlabs/skeleton'
+	import { initializeStores } from '@skeletonlabs/skeleton'
+	initializeStores()
+
 	import github from '$lib/images/github.png'
 	import back from '$lib/images/back.png'
 	import { page } from '$app/stores'
@@ -44,3 +48,5 @@
 </AppBar>
 
 <slot />
+
+<Modal />

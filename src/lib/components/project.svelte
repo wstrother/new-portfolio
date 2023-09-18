@@ -5,6 +5,9 @@
     import wwwLogo from '$lib/images/www.png'
     import { fade } from 'svelte/transition'
     import { PUBLIC_GH_RAW_URL, PUBLIC_GH_BASE_URL } from '$env/static/public'
+	import { getModalStore } from '@skeletonlabs/skeleton'
+	import ImageModal from './image-modal.svelte';
+    const modalStore = getModalStore()
 
     export let project = {
         title: '',
@@ -17,30 +20,47 @@
     project.readmeURL = `${PUBLIC_GH_RAW_URL}/${project.repoName}/${project.readmeFile}`
 
     let innerMD
+
+    const showImage = (src) => {
+        modalStore.trigger({
+            type: 'component',
+            component: {
+                ref: ImageModal,
+                props: {src},
+                alt: `${project.repoName} screen shot`
+            }
+        })
+    }
 </script>
 
 <div class="project-main overflow-hidden">
     {#if project.imgs.length > 0}
         <div class="img-section">
+            <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
             <div class='img-container'>
-                <img src={project.imgs[0]} alt={`${project.title} screenshot`} />
+                <!-- svelte-ignore a11y-click-events-have-key-events -->
+                <img src={project.imgs[0]} alt={`${project.title} screenshot`} 
+                    class="cursor-pointer" on:click={() => showImage(project.imgs[0])}
+                />
             </div>
+
             {#if project.imgs.length > 1}
                 <div class="grid grid-cols-3 gap-4 items-center p-2">
                     {#each project.imgs as src}
-                        <div class="img-preview">
-                            <img {src} alt="project screenshot" />
+                        <div class="img-preview img-container">
+                            <!-- svelte-ignore a11y-click-events-have-key-events -->
+                            <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+                            <img {src} alt="project screenshot"
+                                class="cursor-pointer" 
+                                on:click={() => showImage(src)}
+                            />
                         </div>
                     {/each}
                 </div>
             {/if}
         </div>
     {/if}
-    
 
-    <!-- <div class="flex justify-start items-center m-4">    
-        
-    </div> -->
     <div class="icons">
         <span class="flex flex-row gap-2">
             <a  href={project.repoURL}
@@ -77,12 +97,12 @@
 </div>
 
 <style lang="postcss">
-    .img-container img {@apply object-cover h-[100%] w-[100%]}
+    .img-container>img {@apply object-cover h-[100%]}
     .img-section {
         @apply float-left w-[40%]
     }
     .img-container {
-        @apply  rounded border border-black 
+        @apply  rounded border border-black
                 m-4 overflow-hidden
                 max-h-[250px] h-fit
     }
