@@ -2,7 +2,6 @@
     import { TabGroup } from "@skeletonlabs/skeleton"
     
     export let listBG, panelBG
-    console.log(listBG)
 </script>
 
 <TabGroup
@@ -20,3 +19,9 @@
     </svelte:fragment>
 
 </TabGroup>
+
+<style lang="postcss">
+    :global(span) {
+        @apply transition-all
+    }
+</style>

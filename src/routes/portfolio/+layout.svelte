@@ -32,7 +32,7 @@
 				selected={tabSet === slug}
 				on:click={() => tabSet=slug}
 			>
-				<span class="transition-all">{name}</span>
+				<span>{name}</span>
 			</TabAnchor>
 		{/each}
 		
