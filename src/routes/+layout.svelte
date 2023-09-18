@@ -1,16 +1,16 @@
 <script>
-	import '../app.postcss';
-	// import '../readme.postcss';
-	
-	import { AppBar } from '@skeletonlabs/skeleton';
-	import github from '$lib/images/github.png';
-	import back from '$lib/images/back.png';
-	import { page } from '$app/stores';
-	import { slide } from 'svelte/transition';
+	import '../app.postcss'
+	import '../readme.postcss'
 
-	let backButton = false;
+	import { AppBar } from '@skeletonlabs/skeleton'
+	import github from '$lib/images/github.png'
+	import back from '$lib/images/back.png'
+	import { page } from '$app/stores'
+	import { slide } from 'svelte/transition'
+
+	let backButton = false
 	$: {
-		backButton = $page.url.pathname !== '/';
+		backButton = $page.url.pathname !== '/'
 	}
 
 </script>
