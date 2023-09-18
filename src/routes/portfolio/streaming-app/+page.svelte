@@ -1,13 +1,11 @@
 <script>
     import ProjectHeader from '$lib/components/project-header.svelte'
     import img from '$lib/images/streamingapp.png'
-    import { PUBLIC_GH_RAW_URL, PUBLIC_GH_BASE_URL } from '$env/static/public'
 
-    const name = 'streaming-app'
     const project = {
         title: 'Streaming App', img,
-        readmeURL: `${PUBLIC_GH_RAW_URL}/${name}/master/README.md`,
-        repoURL: `${PUBLIC_GH_BASE_URL}/${name}`
+        repoName: 'streaming-app',
+        readmeFile: `master/README.md`,
     }
 </script>
 

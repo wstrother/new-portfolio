@@ -9,7 +9,6 @@
 	let tabs=[
 		['Streaming App', 'streaming-app'],
 		['Twitch Bot', 'twitch-bot'],
-		['Odds and Ends', 'other-projects'],
 		['Visual Art', 'visual-art'],
 	]
 
@@ -27,7 +26,8 @@
 
 <div class="page-main" id="page-main">
     <TabGroup
-		regionList='variant-glass-tertiary rounded items-center gap-4'
+		regionList='variant-glass-tertiary rounded items-end gap-4 h-[3.5rem] overflow-y-hidden'
+		active="text-tertiary-500"
 		regionPanel='bg-tertiary-900 rounded p-1 min-h-[50vh] m-0'
 		spacing='space'
 	>
@@ -37,16 +37,10 @@
 				selected={tabSet === slug}
 				on:click={() => tabSet=slug}
 			>
-				<span class:selected={tabSet === slug}>{name}</span>
+				<span class:h3={tabSet === slug} class="h-[100%] transition-all duration-[300ms] ease-in-out">{name}</span>
 			</TabAnchor>
 		{/each}
 	</TabGroup>
 
 	<slot />
 </div>
-
-<style lang="postcss">
-	.selected {
-		@apply h3 ml-4
-	}
-</style>

@@ -8,14 +8,12 @@
 	import back from '$lib/images/back.png';
 	import { page } from '$app/stores';
 	import { slide } from 'svelte/transition';
-	import { onMount } from 'svelte';
 
 	let backButton = false;
 	$: {
 		backButton = $page.url.pathname !== '/';
 	}
 
-	// h1 h2 h3 h4
 </script>
 
 <AppBar 
@@ -23,8 +21,8 @@
 	shadow='shadow'
 	background='variant-glass-primary'
 	padding='py-2 pl-8 pr-8'
-	slotLead="w-4 h-4 mx-0 aspect-square hover:scale-[115%]"
-	slotTrail="hover:scale-[115%]"
+	slotLead="w-4 h-4 mx-0 aspect-square hover:scale-[115%] transition"
+	slotTrail="hover:scale-[115%] transition"
 >
 
 	<svelte:fragment slot="lead">
