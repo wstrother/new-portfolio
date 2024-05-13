@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link rel="modulepreload" href="/_app/immutable/entry/start.afae104a.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/scheduler.bcceadc5.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.154fc41e.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.6f3407d1.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.652ec440.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.0aa9e676.js">
+	</head>
+	<body data-sveltekit-preload-data="hover" data-theme="oregano">
+		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_1wdxfsq = {
+						base: "",
+						env: {"PUBLIC_GH_RAW_URL":"https://raw.githubusercontent.com/wstrother","PUBLIC_GH_BASE_URL":"https://github.com/wstrother"}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/_app/immutable/entry/start.afae104a.js"),
+						import("/_app/immutable/entry/app.652ec440.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
