@@ -1,5 +1,5 @@
 <script>
-	import { Tab } from '@skeletonlabs/skeleton'
+	import { Tab, TabAnchor } from '@skeletonlabs/skeleton'
 	import TabWrapper from '$lib/components/tab-wrapper.svelte'
 	import SvelteMarkdown from 'svelte-markdown'
 
@@ -35,6 +35,10 @@
 				<span>{name}</span>
 			</Tab>
 		{/each}
+		<TabAnchor href="https://wstrother.github.io/devblog/">
+			<span>Dev Blog</span>
+		</TabAnchor>
+
 			
 		<svelte:fragment slot="panel">
 			{#key tabSet}

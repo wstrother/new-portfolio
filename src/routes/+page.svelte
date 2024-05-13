@@ -12,7 +12,8 @@
 
 		<a href='/portfolio'>View My Portfolio</a>
 		
+		<a href='https://wstrother.github.io/devblog/' >Dev Blog</a>
+		
 		<a href='/about' >Learn About Me</a>
-
 	</div>
 </div>

@@ -38,6 +38,9 @@
 				<span>{name}</span>
 			</TabAnchor>
 		{/each}
+		<TabAnchor href="https://wstrother.github.io/devblog/">
+			<span>Dev Blog</span>
+		</TabAnchor>
 		
 		<svelte:fragment slot="panel">
 			<slot />
