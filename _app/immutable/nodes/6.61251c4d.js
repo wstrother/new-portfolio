@@ -1,4 +1,4 @@
-import{s as r,t as o,b as l,i as p,d as c}from"../chunks/scheduler.3a68590b.js";import{S as m,i as g,c as u,a as d,m as f,t as h,b as y,d as b}from"../chunks/index.15f066c1.js";import{P as _}from"../chunks/project.0da2ee00.js";const w="/_app/immutable/assets/streaming-app-1.e28b9ecf.png",$="/_app/immutable/assets/streaming-app-2.a04f80c0.png",v="/_app/immutable/assets/streaming-app-3.3ebf3b13.gif";function S(n){let t;return{c(){t=o(`This streaming application is a full stack web app that will provide \r
+import{s as r,t as o,b as l,i as p,d as c}from"../chunks/scheduler.bcceadc5.js";import{S as m,i as g,c as u,a as d,m as f,t as h,b as y,d as b}from"../chunks/index.0aa9e676.js";import{P as _}from"../chunks/project.7fa38e6c.js";const w="/_app/immutable/assets/streaming-app-1.e28b9ecf.png",$="/_app/immutable/assets/streaming-app-2.a04f80c0.png",v="/_app/immutable/assets/streaming-app-3.3ebf3b13.gif";function S(n){let t;return{c(){t=o(`This streaming application is a full stack web app that will provide \r
 some really cool functionality for streaming with dynamic \r
 layouts with real time state management.\r
 \r

@@ -1,4 +1,4 @@
-import{s,t as i,b as c,i as h,d as m}from"../chunks/scheduler.3a68590b.js";import{S as p,i as l,c as d,a as u,m as f,t as b,b as g,d as y}from"../chunks/index.15f066c1.js";import{P as w}from"../chunks/project.0da2ee00.js";const _="/_app/immutable/assets/twitchbot.36c76a70.png";function $(a){let t;return{c(){t=i(`This code repository defines a simple Python script which will launch \r
+import{s,t as i,b as c,i as h,d as m}from"../chunks/scheduler.bcceadc5.js";import{S as p,i as l,c as d,a as u,m as f,t as b,b as g,d as y}from"../chunks/index.0aa9e676.js";import{P as w}from"../chunks/project.7fa38e6c.js";const _="/_app/immutable/assets/twitchbot.36c76a70.png";function $(a){let t;return{c(){t=i(`This code repository defines a simple Python script which will launch \r
 a helpful bot to connect to your Twitch chat.\r
 \r
 The real fun comes from the way this project defines and implements a specific JSON spec for creating a set of commands. These commands can be as simple\r
